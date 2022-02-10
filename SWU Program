@@ -1,0 +1,63 @@
+#include <iostream>
+#include <fstream> 
+#include <string>
+
+using namespace std;
+
+int main ()
+{
+
+
+    //Open file and declare variables 
+    ofstream outputFile;
+    outputFile.open("water.txt");
+    int accNum, galNum;
+    char cusType;
+
+    // Gather data from customer 
+    cout << "Enter account number (-1 to quit):";
+    cin >> accNum;
+
+    while ( accNum != -1 )
+    {
+        
+
+        cout << "Enter R for residential, B for business:";
+        cin >> cusType;
+
+                while (cusType != 'R' && cusType != 'r' && cusType != 'B' && cusType != 'b') //input validation 
+                {
+                    
+                    cout << cusType << " is not an option, enter R for residential B for buisness" << endl;
+                    cin >> cusType; 
+
+                }
+
+        cout << "Enter number of gallons used:";
+        cin >> galNum;
+
+                while ( galNum <= -1 ) //input validation
+                {
+                    cout << "Number of gallons should be positive of 0, enter number of gallons" << endl;
+                    cin >> galNum;
+                }
+            
+            
+        cout << "Enter account number (-1 to quit):";
+        cin >> accNum;
+    
+    }
+
+        //Write values to file 
+        outputFile << accNum << endl;
+        outputFile << cusType << endl; 
+        outputFile << galNum << endl; 
+        
+
+        // Close the file
+        outputFile.close(); 
+
+    cout << "Thank you for using this program!";
+    
+    return 0;
+}
