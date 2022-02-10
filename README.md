@@ -1,3 +1,3 @@
 # Simple-Water-Usage
-A simple program for recording water usage 
-CIS 115 Lab5B 
+// A simple C++ program for recording water usage //
+CIS 115 Lab5B //
